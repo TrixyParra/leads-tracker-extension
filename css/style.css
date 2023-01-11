@@ -1,0 +1,25 @@
+body {
+    margin: 0; 
+    padding: 10px; 
+} 
+
+input {
+    width: 100%; 
+    border: 1px solid orangered; 
+    padding: 10px; 
+    box-sizing: border-box; 
+} 
+
+button {
+    background: orangered; 
+    color: #fff; 
+    font-weight: bold; 
+    border: 1px solid orangered; 
+    padding: 10px 20px; 
+    margin-top: 10px;  
+} 
+
+#delete-btn {
+    background: #fff; 
+    color: orangered; 
+} 
