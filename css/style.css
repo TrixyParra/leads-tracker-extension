@@ -16,7 +16,8 @@ button {
     font-weight: bold; 
     border: 1px solid orangered; 
     padding: 10px 20px; 
-    margin-top: 10px;  
+    margin-top: 10px; 
+    cursor: pointer; 
 } 
 
 #delete-btn {
