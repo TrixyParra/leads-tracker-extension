@@ -24,3 +24,18 @@ button {
     background: #fff; 
     color: orangered; 
 } 
+
+ul {
+    margin-top: 20px; 
+    list-style: none;
+    padding-left: 0; 
+} 
+
+li {
+    margin-bottom: 5px; 
+} 
+
+li a {
+    color: darkorange; 
+    font-weight: bold; 
+} 
