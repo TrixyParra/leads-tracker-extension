@@ -1,6 +1,6 @@
 // * Global Variables 
 
-let myLeads = ["www.example.com", "www.example2.com", "www.sample.com"]; 
+let myLeads = []; 
 const inputEl = document.getElementById("input-el"); 
 const inputBtn = document.getElementById("input-btn"); 
 const ulEl = document.getElementById("ul-el"); 
@@ -10,21 +10,34 @@ const ulEl = document.getElementById("ul-el");
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value) 
-    console.log(myLeads) 
+    // console.log(myLeads) 
+
+    // clear the input after clicked 
+    inputEl.value = "" 
+
+    // invoke the render function with myleads as the argument 
+    render(myLeads) 
 }) 
 
-// Loop through the myLeads Array 
-let listItems = ""; 
 
-for (let i=0; i < myLeads.length; i++) {
-    listItems += `
-        <li>
-            <a href="#">${myLeads[i]}</a>
-        </li>
-    ` 
-    console.log(myLeads[i]) 
-    console.log(listItems) 
-} 
+// * Reusable Render Function 
 
-// Adding the list items to the ul element 
-ulEl.innerHTML = listItems      // ? manipulating DOM comes at a cost - manipulate one time rather than many times; therefore, doing innerHTML outside of the loop 
+function render(leads) {
+    // Loop through the myLeads Array 
+    let listItems = ""; 
+
+    for (let i=0; i < leads.length; i++) {
+        listItems += `
+            <li>
+                <a target="_blank" href="${leads[i]}" rel="noopener noreferrer">
+                    ${leads[i]}
+                </a>
+            </li>
+        ` 
+        console.log(leads[i]) 
+        console.log(listItems) 
+    } 
+
+    // Adding the list items to the ul element 
+    ulEl.innerHTML = listItems      // ? manipulating DOM comes with a cost - manipulate one time rather than many times; therefore, doing innerHTML outside of the loop 
+}
