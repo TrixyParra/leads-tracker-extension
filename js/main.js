@@ -79,7 +79,7 @@ deleteBtn.addEventListener("click", function() {
 
 // * Save Tab Button Functionality 
 
-tabBtn.addEventListener("click", funtion() {
+tabBtn.addEventListener("click", function() {
     // grab the url of the current tab and current window
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         // push to myLeads array 
